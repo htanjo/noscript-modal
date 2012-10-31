@@ -1,0 +1,78 @@
+.ns-modal {
+  position: relative;
+  z-index: 10000;
+}
+.ns-modal:target {
+  z-index: 10010;
+}
+.ns-modal-overlay,
+.ns-modal-box {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: opacity .2s linear 0s, height 0s linear .2s;
+     -moz-transition: opacity .2s linear 0s, height 0s linear .2s;
+       -o-transition: opacity .2s linear 0s, height 0s linear .2s;
+          transition: opacity .2s linear 0s, height 0s linear .2s;
+}
+.ns-modal-overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: default;
+  outline: none;
+  background-color: rgba(0,0,0,.5);
+}
+.ns-modal-box {
+  display: block;
+  position: fixed;
+  top: 150px;
+  left: 50%;
+  width: 500px;
+  margin-left: -250px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+}
+.ns-modal:target > .ns-modal-overlay,
+.ns-modal:target > .ns-modal-box {
+  opacity: 1;
+  -webkit-transition: opacity .2s linear 0s, height 0s linear 0s;
+     -moz-transition: opacity .2s linear 0s, height 0s linear 0s;
+       -o-transition: opacity .2s linear 0s, height 0s linear 0s;
+          transition: opacity .2s linear 0s, height 0s linear 0s;
+}
+.ns-modal:target > .ns-modal-overlay {
+  height: 100%;
+}
+.ns-modal:target > .ns-modal-box {
+  height: auto;
+}
+
+.ns-modal-close {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  color: #ccc;
+}
+.ns-modal-close:hover,
+.ns-modal-close:focus {
+  color: #999;
+  text-decoration: none;
+}
+.ns-modal-box-inner {
+  padding: 15px;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Noscript Modal</title>
+  <meta name="description" content="Modal box by only CSS.">
+  <link rel="stylesheet" href="noscript-modal.css">
+  <style>
+    body { margin: 0; font-size: 14px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 1.5; color: #333; background-color: #fff; }
+    a { text-decoration: none; color: #08c; }
+    a:hover { text-decoration: underline; }
+    #container { width: 720px; margin: 0 auto; padding: 50px 0; }
+    .ns-modal h2 { margin: 0 0 10px; }
+    .ns-modal p  { margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Noscript Modal Demo</h1>
+    <ul>
+      <li><a href="#modal01">Open Modal #01</a></li>
+      <li><a href="#modal02">Open Modal #02</a></li>
+    </ul>
+    <div><b>Support:</b> IE9+, Firefox, Chrome, Safari, Opera</div>
+  </div>
+  <div id="modal01" class="ns-modal">
+    <a href="#" class="ns-modal-overlay"></a>
+    <div class="ns-modal-box">
+      <a href="#" class="ns-modal-close">&times;</a>
+      <div class="ns-modal-box-inner">
+        <h2>Hi, I am noscript modal box!!!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac mauris ac metus tincidunt consequat ac id quam. Nam scelerisque tempor lectus, eu aliquet nunc gravida nec. Cras vitae accumsan nunc.</p>
+        <p>Curabitur at consequat dolor. Aliquam nisl turpis, convallis id consectetur tempor, tincidunt eu sem.</p>
+      </div>
+    </div>
+  </div>
+  <div id="modal02" class="ns-modal">
+    <a href="#" class="ns-modal-overlay"></a>
+    <div class="ns-modal-box">
+      <a href="#" class="ns-modal-close">&times;</a>
+      <div class="ns-modal-box-inner">
+        <p>I am noscript modal, too!!!</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
