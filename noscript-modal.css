@@ -61,12 +61,24 @@
 }
 .ns-modal-box {
   display: block;
-  position: relative;
-  width: 500px;
-  margin: 150px auto 0;
+  position: absolute;
+  top: 120px;
+  left: 15px;
+  right: 15px;
+  overflow: auto;
+  max-width: 500px;
+  margin: auto;
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.4);
+}
+.ns-modal-box.full {
+  top: 15px;
+  bottom: 15px;
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 0;
 }
 .ns-modal-close {
   display: block;

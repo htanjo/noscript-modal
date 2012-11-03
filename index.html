@@ -27,22 +27,89 @@
       padding: 50px 0;
     }
     .ns-modal h2 {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
     .ns-modal p {
-      margin: 10px 0;
+      margin: 0 0 8px;
+    }
+    .form-head {
+      padding: 15px 15px 2px;
+      border-radius: 4px 4px 0 0;
+      text-shadow: 0 1px 0 rgba(255,255,255,1);
+      background-color: #eee;
+    }
+    .form-body {
+      padding: 15px 25px;
+    }
+    .form-foot {
+      padding: 15px 15px 20px;
+      border-top: 1px solid #ddd;
+      border-radius: 0 0 4px 4px;
+      text-align: right;
+      background-color: #eee;
+    }
+    .label {
+      margin-bottom: 4px;
+    }
+    .input-block {
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 8px;
+      padding: 5px;
+      border: 1px solid #bbb;
+      box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.08);
+      font-size: 16px;
+    }
+    .input-block:focus {
+      border-color: #c93;
+      box-shadow: inset 0 1px 7px 0 rgba(0,0,0,.08), 0 0 7px 0 rgba(255,200,120,.3);
+      outline: none;
+    }
+    .button {
+      display: inline-block;
+      box-sizing: border-box;
+      min-width: 80px;
+      height: 26px;
+      line-height: 26px;
+      margin-left: 3px;
+      padding: 0 5px;
+      border: none;
+      border-radius: 3px;
+      vertical-align: top;
+      text-align: center;
+      text-decoration: none;
+      text-shadow: 0 1px 0 rgba(0,0,0,.2);
+      font-size: 13px;
+      color: #333;
+      background-color: #fff;
+      background-image: -webkit-linear-gradient(top, #fff, #eee);
+      box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+      cursor: pointer;
+    }
+    .button:hover {
+      text-decoration: none;
+    }
+    .button:first-child {
+      margin-left: 0;
+    }
+    .button.button-submit {
+      color: #fff;
+      background-color: #f80;
+      background-image: -webkit-linear-gradient(top, #f80, #e70);
     }
     #modal02 > .ns-modal-box {
-      width: 360px;
+      max-width: 340px;
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <h1>Noscript Modal Demo</h1>
+    <h1>Noscript Modal</h1>
     <ul>
-      <li><a href="#modal01">Open Modal #01</a></li>
-      <li><a href="#modal02">Open Modal #02</a></li>
+      <li><a href="#modal01">Basic sample</a></li>
+      <li><a href="#modal02">Form in modal</a></li>
+      <li><a href="#modal03">Full size and un-clickable overlay</a></li>
     </ul>
     <div><b>Support:</b> IE9+, Firefox, Chrome, Safari, Opera</div>
   </div>
@@ -61,8 +128,31 @@
     <a href="#" class="ns-modal-overlay"></a>
     <div class="ns-modal-box">
       <a href="#" class="ns-modal-close">&times;</a>
+      <form>
+        <div class="form-head">
+          <h2>Sign in</h2>
+        </div>
+        <div class="form-body">
+          <div class="label">Username</div>
+          <input type="text" value="" class="input-block">
+          <div class="label">Password</div>
+          <input type="password" value="" class="input-block">
+        </div>
+        <div class="form-foot">
+          <button type="submit" class="button button-submit">Sign in</button>
+          <a href="#" class="button">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="modal03" class="ns-modal">
+    <div class="ns-modal-overlay"></div>
+    <div class="ns-modal-box full">
+      <a href="#" class="ns-modal-close">&times;</a>
       <div class="ns-modal-box-inner">
-        <p>I am noscript modal, too!!!</p>
+        <h2>Hi, I am noscript modal box!!!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac mauris ac metus tincidunt consequat ac id quam. Nam scelerisque tempor lectus, eu aliquet nunc gravida nec. Cras vitae accumsan nunc.</p>
+        <p>Curabitur at consequat dolor. Aliquam nisl turpis, convallis id consectetur tempor, tincidunt eu sem.</p>
       </div>
     </div>
   </div>
